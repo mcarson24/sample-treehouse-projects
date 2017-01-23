@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Newsletter - Signup</title>
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="well">
+        <h1>Sign Up for Our Newsletter</h1>
+        <form action="signup.php" method="POST" id="newsletter">
+            <div class="form-item">
+                <label for="name">Please type you name</label>
+                <input type="text" name="name" id="name" v-model="name" required>
+            </div>
+            <div class="form-item">
+                <label for="email">Your email address</label> 
+                <input type="email" name="email" id="email" v-model="email" required>
+            </div>
+            <div class="form-item">
+                <button v-on:click.prevent="signUp()" v-if="!sent">Sign Up</button>
+                <span v-else>Thanks for signing up!</span>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.2/vue-resource.js"></script>
+    <script>
+        var signUp = new Vue({
+            el: '#newsletter',
+            data: {
+                name: '',
+                email: '',
+                sent: false
+            },
+            methods: {
+                signUp() {
+                    this.$http.post('signup.php', [this.name, this.email]).then(response => {
+                        this.sent = true;
+                    }, error => {
+                        var message = 'Error ' + error.status + ' ' + error.url + ' ' + error.statusText;
+                        console.log(message);
+                    })
+                }
+            }
+        })
+    </script>
+  </body>
+</html>

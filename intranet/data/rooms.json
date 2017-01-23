@@ -1,0 +1,26 @@
+[
+  {
+   "number": 101,
+   "available": false
+  },
+  {
+   "number": 102,
+   "available": true
+  },
+  {
+   "number": 103,
+   "available": false
+  },
+  {
+   "number": 104,
+   "available": false
+  },
+  {
+   "number": 105,
+   "available": true
+  },
+  {
+   "number": 106,
+   "available": true
+  }
+]

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>AJAX Flickr Photo Feeder</title>
+  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+
+  
+</head>
+<body>
+  <div class="grid-container centered">
+    <div class="grid-100">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="heading">
+            <h1>Flickr Photo Feeder</h1>
+            <p>Choose which kind of animal you'd like to return photos of...</p>
+          </div>
+          <ul class="filter-select" v-if="photos">
+            <li v-for="option in options"><button v-on:click="getPhotos(option)" v-bind:class="active === option ? 'selected' : ''">{{ option.item }}</button></li>
+          </ul>
+          <span v-else>No photos found.</span>
+          <input class="search" type="text" v-model="search" v-on:keyup.enter="searchPhotos()">
+        </div>
+
+        <div id="photos" class="clearfix">
+          <ul>
+            <li v-for="photo in photos" class="grid-25 tablet-grid-50">
+              <a href="{{ photo.link }}" class="image">
+                <img v-bind:src="photo.media.m" alt="{{ photo.title }}">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.0.2/vue-resource.js"></script>
+    <script src="js/flickr.js"></script>
+    <script src="js/Dice.js"></script>
+</body>
+</html>
