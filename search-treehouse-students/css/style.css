@@ -1,0 +1,64 @@
+html {
+    background-color: whitesmoke;
+}
+#root {
+    width: 40%;
+    margin: 0 auto;
+    background-color: #FFF;
+    text-align: center;
+    border-radius: 3px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05) inset,0 2px 0 rgba(0,0,0,0.1);
+}
+#root input[type=text] {
+    margin: 15px 0 15px 0;
+    width: 80%;
+    height: 80px;
+    font-size: 35px;
+    border-radius: 3px;
+    box-shadow: none;
+    padding: 0 10px;
+}
+#root h2 a {
+    text-decoration: none;
+    color: #000;
+}
+#root button {
+    display: block;
+    margin: 0 auto;
+    height: 80px;
+    width: 85%;
+    font-size: 20px;
+    background-color: #60B7E2;
+    color: #FFF;
+    /* Make the button look flat */
+    border: 0;
+    box-shadow:none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#root img {
+    width: 50%;
+    margin: 10px;
+    border-radius: 50%;
+}
+#root .user div {
+    border-top: 1px solid whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    padding: 24px;
+    font-size: 20px;
+}
+#root .user div:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+#root span {
+    width: 85%;
+    display: block;
+    color: red;
+    font-size: 1.12em;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
