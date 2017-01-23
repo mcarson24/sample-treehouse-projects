@@ -1,0 +1,239 @@
+/** Webfont */
+@font-face {
+    font-family: 'Abolition Regular';
+    src: url('../fonts/abolition-regular-webfont.eot');
+    src: url('../fonts/abolition-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/abolition-regular-webfont.woff') format('woff'),
+         url('../fonts/abolition-regular-webfont.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #878787;
+    margin: 0;
+    font: 1em/1.5 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+}
+
+.main-header img {
+    box-shadow: none;
+    margin-top: 150px;
+}
+
+.main-header {
+    height: 850px;
+    background: linear-gradient(#FFA949, transparent 90%),
+                linear-gradient(0deg, #FFF, transparent),
+                #FFA949 url('../img/mountains.jpg') no-repeat center/cover;
+    text-align: center;
+    padding-top: 150px;
+}
+
+.title {
+    color: white;
+    font-size: 1.625em; /* size / parent = desired size in em // 26 / 16 = 1.625 */
+    letter-spacing: .065em;
+    font-weight: 200;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+h1, 
+h2 {
+    font-family: 'Abolition Regular', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-size: 5.625em; /* 90 / 16 = 5.625 */
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 3px 3px 5px #222;
+    margin: 12px 0 0;
+}
+
+h2 {
+    font-size: 3.3125em; /* 53 / 16 */
+    font-weight: normal;
+    line-height: 1.1;
+    margin-bottom: .5em; /* 26px */
+}
+
+h3 {    
+    font-size: 1.25em; /* 20 / 16 */
+    color: #48525C;
+    line-height: 1.2;
+    margin-bottom: 1.7em; /* 34 / 20 */   
+}
+
+
+img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 15px 20px -12px rgba(0, 0, 0, .8);
+    border-radius: 10px;
+}
+
+ul,
+ol {
+    /*list-style-position: inside;*/
+    /*padding-left: 0;*/
+    /*margin-left: 0;  */
+    margin: 30px 0;
+
+}
+
+ul {
+}
+
+ol {
+    list-style-type: decimal-leading-zero;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#primary-content,
+#secondary-content {
+    width: 75%;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+#secondary-content {
+    padding-top: 80px;
+    padding-bottom: 70px;
+    border-bottom: 2px solid #DFE2E6;
+}
+
+.wildlife {
+    color: #FFF;
+    background: #434852 url('../img/bear.jpg') no-repeat center/cover;
+    padding: 18% 24%;
+    border-top: 10px solid #FFA949;
+    margin: 105px 0 60px;
+    max-width: 900px;
+    box-shadow: 0 15px 20px -12px rgba(0, 0, 0, .8);
+    border-radius: 10px;
+}
+
+.arrow {
+    width: 50px;
+}
+
+.t-border {
+    border-top: 2px solid lightgrey;
+}
+
+.callout {
+    font-size: 1.25em;
+    border-bottom: 3px solid;
+    padding: 0 9px 3px;
+    margin-top: 20px;
+}
+
+#primary-content {
+    text-align: center;
+}
+
+footer {
+    padding: 60px 0;
+    border-bottom: solid 10px #FFA949;
+    text-align: center;
+}
+
+a:link {
+    color: rgb(255, 169, 73);
+    text-decoration: none;
+}
+
+a:visited {
+    color: lightblue;
+}
+
+a:hover {
+    color: rgba(255, 169, 73, .4);
+}
+
+a:active {
+    color: lightcoral;
+    font-weight: bold;
+}
+
+:focus {
+    color: white;
+    background-color: orange;
+}
+
+.resorts,
+.tips {
+    width: 46.5%;
+}
+
+.resorts {
+    float: right;
+}
+
+.tips {
+    float: left;
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*** Media Queries ***/
+
+@media all and (max-width: 1024px) {
+    #primary-content,
+    #secondary-content {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #primary-content,
+    #secondary-content {
+        width: 100%;
+        padding: 20px;
+        border: none; 
+    }
+    header {
+        max-height: 370px;
+    }
+    .main-header {
+        padding: 50px 25px 0;
+    }
+    .title {
+        font-size: 1.3em;
+        border: none;
+    }
+    h1 {
+        font-size: 5em;
+        line-height: 1.1;
+    }
+    .arrow {
+        display: none;
+    }
+    .resorts,
+    .tips {
+        float: none;
+        width: 100%;
+    }
+    .intro {
+        font-size: 1rem;
+    }
+    .wildlife {
+        padding: 10px 25px;
+        margin: 50px 0 20px;
+    }
+    footer {
+        padding: 20px 0;
+    }
+}
