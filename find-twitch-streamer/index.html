@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Twitch Search</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div id="app">
+        <div id="search" v-show="!foundStreamer">
+          <img class="twitch-brand" src="images/glitch_purple.png" alt="Twitch logo">  
+          <span class="error" v-show="error">{{ error }}</span>
+          <input type="text" v-model="streamer" placeholder="Search for a streamer" @keyup.enter="searchForStreamer">
+        </div>
+        <div id="streamer" v-show="foundStreamer" :class="{ 'live': streamerIsLive, 'offline': !streamerIsLive }">
+          <h1 class="title">{{ displayName }}</h1>
+          <img :src="photo" :alt="photoAltText">
+          <h2><a :href="twitchLink">{{ status }}</a></h2>
+          <button @click="resetData()">Search Again</button>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>

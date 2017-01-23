@@ -1,0 +1,23 @@
+{
+  "name": "testing-vue-2",
+  "version": "1.0.0",
+  "description": "Learning Vue.js 2",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup scripts/main.js --output js/app.js"
+  },
+  "author": "matthew24carson@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browser": "^3.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.9.1",
+    "rollup": "^0.36.4"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common"
+  }
+}

@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 25px;
+  padding: 0;
+  background: whitesmoke; }
+
+#app {
+  background: #FFF;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px; }
+  #app input[type=text],
+  #app button {
+    width: 80%;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 25px; }
+  #app button {
+    background-color: #6441A4;
+    border: none;
+    color: white;
+    margin: 15px 0; }
+
+.title span {
+  font-size: .85em;
+  font-weight: normal; }
+
+.live img,
+.offline img {
+  border-radius: 50%; }
+
+.live img {
+  border: 5px solid lightgreen; }
+
+.offline img {
+  border: 5px solid red; }
+
+.twitch-brand {
+  width: 50%;
+  margin: 25px; }
+
+/*# sourceMappingURL=app.css.map */
